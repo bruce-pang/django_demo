@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -56,6 +57,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [],
+        #'DIRS': [os.path.join(BASE_DIR, 'templates')], # 配置成这样后，会去项目根目录下的templates目录寻找html文件，如果没有找到，会去app目录下的templates目录寻找
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

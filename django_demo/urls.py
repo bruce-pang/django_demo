@@ -16,7 +16,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from app01 import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+
+    # www.brucepang.com/index/ -> 函数
+    # path(请求的url, 函数名),
+    path('index/', views.index),
+    path('user/list', views.user_list),
+    path('user/add', views.user_add),
+    path('user/edit', views.user_edit),
+    path('user/reomve', views.user_del),
 ]
