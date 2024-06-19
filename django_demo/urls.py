@@ -28,4 +28,11 @@ urlpatterns = [
     path('user/add', views.user_add),
     path('user/edit', views.user_edit),
     path('user/reomve', views.user_del),
+    path('user/tpl/', views.tpl),
+    # 新闻
+    path('news/', views.news),
+    #请求与响应
+    path('something/', views.something),
+    #用户登录
+    path('login/', views.login),
 ]

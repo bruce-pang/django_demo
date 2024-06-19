@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>模板语法的学习</h1>
+<div>
+    <h2>身份信息</h2>
+    <p>姓名：{{ name }}</p>
+    <p>年龄：{{ age }}</p>
+{#    <p>兴趣爱好：{{ hobby.0 }}</p>#}
+    <div>
+        <h3>兴趣爱好</h3>
+        <ul>
+            {% for h in hobby %}
+                <li>{{ h }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+</body>
+</html>
